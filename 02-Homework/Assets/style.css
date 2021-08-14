@@ -1,0 +1,108 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--txtcolor);
+}
+
+:root {
+    --maincolor: rgb(190, 233, 190);
+    --txtcolor: lightslategrey;
+    --seriffont: times new roman, serif;
+}
+
+/*this is for the main and header of the page to be the color and centered*/
+header {
+    background-color: var(--maincolor);
+    display: flex;
+    justify-content: center;
+}
+Main {
+    display: block;
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+}
+h1 {
+    margin: 1%; 
+    padding: 1%;
+    font-family:var(--seriffont);
+    font-size: 60px;
+    color: ivory;
+}
+Main h2 {
+font-size: 300%;
+font-family: var(--seriffont);
+}
+Main img {
+    max-height: 500px;
+}
+main p{
+    margin:1%;
+}
+/*below gets the nav bar to be centered*/
+nav {
+    padding-top: .5%;
+    padding-bottom: 1%;
+    background-color: var(--maincolor);
+    text-align: center;
+}
+/*below gets the navbar list to have some distance between them, and keeps them inline*/
+nav ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+/*the width below identifies how much of the screen each nav list item takes up*/
+nav li {
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+}
+nav li a {
+    color:var(--txtcolor);
+    text-decoration: none;
+    font-size: 170%;
+    font-family: monospace;
+    padding: 1%;
+}
+nav li a:hover {
+    color: #c67ee7;
+}
+/*gives the middle sections the space and color*/
+section {
+    background-color: var(--maincolor);
+    margin:1% 5%;
+    padding:1%;
+    text-align: center;
+}
+section h3 {
+    font-size: 200%;
+    font-family: var(--seriffont);
+}
+#art-work-section {
+    display: inline-block;
+}
+#github-section {
+    display: inline-block;
+}
+
+#contact-me-section ul li{
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: space-between ;
+
+}
+a img {
+    max-height:270px;
+    margin: 1%;
+    min-width: 50px;
+}
+/*the following code is for formatting the contact section of the page*/
+
+
+/*the following code is for the footer of the page*/
+
+footer {
+margin: 5%; 
+text-align: center;
+appearance: none;
+text-decoration: none;
+}

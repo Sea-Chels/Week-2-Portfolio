@@ -76,6 +76,7 @@ nav li a {
 }
 nav li a:hover {
     color: #c67ee7;
+    transition: .25s ease;
 }
 /*gives the middle sections the space aesthetics */
 section {
@@ -207,6 +208,7 @@ section li a {
 }
 section li a:hover {
     color: #c67ee7;
+    transition: .25s ease;
 }
 /*the following code is for the footer of the page*/
 

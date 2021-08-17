@@ -89,17 +89,23 @@ section h3 {
     font-family: var(--seriffont);
     color: var(--lighttxt);
 }
+
+section div{
+    display: inline-block;
+    margin: 1%;
+}
 #art-work-section {
     border-style: solid;
     border-color: var(--txtcolor);
     border-width: 2px;
-}
+  }
+
 #github-section {
     border-style: solid;
     border-color: var(--txtcolor);
     border-width: 2px;
 }
-p {
+P {
     padding: 1%;
     font-size: 120%;
 }
@@ -110,17 +116,62 @@ a img {
 }
 a img:hover {
     box-shadow: 2px 2px 4px #4f684f;
-    opacity: 50%;
 }
+ /*idk why but the hover effect on the images doesn't work without this blurb directly below*/ 
+
+#art-work-section div p:hover {
+    opacity: 1;
+    background-color: white;
+    transition: .25s;
+}
+
+/* Testing the code to get hover with opacity and button change */
 /* Trying to get a project title to show up when hovering 
-over the images, refer to WW3 schools. */
-/* a p{
-    text-decoration: none;
-    appearance: none;
-    /* visibility: hidden; */
-    /* position:relative;   
-} */ 
-/* may need to put the image and p tags together in the same parent element/containter */
+over the images, I referred to WW3 schools specifically the lesson on opacity hover text and got the code below, editing it to fit my html document specifically */
+
+.img-container {
+    position: relative;
+  }
+  
+.img {
+    opacity: 1;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    backface-visibility: hidden;
+    padding: 1%;
+  }
+.middle {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.img-container:hover a .img{
+    opacity: 0.3;
+    transition: .5s ease;
+}
+
+.img-container:hover .middle {
+    opacity: 1;
+
+}
+
+.text {
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+  
+
+/*End test */
+
+
 
 #contact {
     border-bottom-style: dashed;
@@ -160,7 +211,7 @@ section li a:hover {
 /*the following code is for the footer of the page*/
 
 footer {
-    margin: 5%; 
+    margin-top: 5%; 
     padding: 1%;
     text-align: center;
 }
@@ -172,11 +223,24 @@ footer a{
     border-color: rgb(233, 233, 233);
     border-width: 1px;
 }
+footer p{
+    margin-top: 3%;
+    color: rgb(204, 226, 202);
+    font-size: 100%;
+    font-family: monospace;
+}
 footer a:hover {
     color: var(--maincolor);
     border-color: var(--txtcolor);
 }
 /*below are the edits that are made for when the screen becomes smaller than a normal desktop*/
+/*theres probably way too many media queries here but I cant figure out how to fix the overlapping of the images and still maintain the overlayed texts*/ 
+
+@media screen and (max-width: 1050px) {
+    section div a img{
+        max-height: 150px;
+    }
+    } 
 @media screen and (max-width: 720px) {
     nav li a {
         font-size: 120%;}
@@ -187,9 +251,6 @@ footer a:hover {
         height: 100%;
         width: 100%;
     }
-    section a img{
-        max-height: 210px;
-    }
     section h3 {
         font-size: 200%;
     }
@@ -199,5 +260,6 @@ footer a:hover {
     p {
         font-size: 100%;
     }
-   
+    /*i want the artworks to be one column when sizing down*/ 
+
 }

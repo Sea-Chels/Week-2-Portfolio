@@ -25,7 +25,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 The following animation shows an example given for appearance and functionality:
 
-![portfolio demo](./Assets/02-advanced-css-homework-demo.gif)
+![portfolio demo](./02-advanced-css-homework-demo.gif)
 
 - - -
 
